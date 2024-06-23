@@ -7,7 +7,7 @@ import requests
 API_ID = 26404724
 API_HASH = 'c173ec37cd2a6190394a0ec7915e7d50'
 PHONE_NUMBER = '+917739098908'  # Your phone number in international format
-TARGET_CHAT_ID = -1002219374008  # Your target chat ID
+TARGET_CHAT_ID = -1002160767030  # Your target chat ID
 
 # Keywords to filter messages
 KEYWORDS = ["charged", "approved"]
@@ -68,7 +68,7 @@ def format(cardd):
         bin = country = flag = type = brand = bank = scheme = "N/A"
 
     extracted_data = (
-        f"𝙓𝙔𝙋𝙃𝙄𝘾「𝗫𝗬」\n"
+        f"⏤͟͞𝙊𝗠 「𝗫𝗬」\n"
         f"═ ═ ═ ═ ═\n"
         f"𝘾𝙖𝙧𝙙: {cardd}\n"
         f"𝙍𝙚𝙨𝙥𝙤𝙣𝙨𝙚: Approved ✅\n"
