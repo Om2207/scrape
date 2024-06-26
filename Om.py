@@ -6,7 +6,7 @@ import requests
 # Your API ID and hash
 API_ID = 26404724
 API_HASH = 'c173ec37cd2a6190394a0ec7915e7d50'
-PHONE_NUMBER = '+917739098908'  # Your phone number in international format
+PHONE_NUMBER = '+10000000'  # Your phone number in international format
 TARGET_CHAT_ID = -1002160767030  # Your target chat ID
 
 # Keywords to filter messages
