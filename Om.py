@@ -54,8 +54,20 @@ def bincheck(bin):
     else:
         return None
 
+def vbv_status(bin):
+    url = f"https://api.adwadev.com/api/vbvapi.php?bin={bin}"
+    res = requests.get(url).json()
+    if "status" in res and "response" in res:
+        return res["status"], res["response"]
+    else:
+        return "N/A", "N/A"
+
 def format(cardd):
-    bin_lookup = bincheck(cardd)
+    card_parts = cardd.split('|')
+    bin = card_parts[0][:6]
+    bin_lookup = bincheck(bin)
+    vbv_stat, vbv_resp = vbv_status(bin)
+    
     if bin_lookup:
         bin = bin_lookup.get("bin", "N/A")
         country = bin_lookup.get("country", "N/A")
@@ -76,6 +88,9 @@ def format(cardd):
         f"𝘽𝙞𝙣 𝙄𝙣𝙛𝙤: {scheme} - {type} - {brand}\n"
         f"𝘽𝙖𝙣𝙠: {bank}\n"
         f"𝘾𝙤𝙪𝙣𝙩𝙧𝙮: {country}\n"
+        f"═ ═ ═ ═ ═\n"
+        f"𝙑𝘽𝙑 𝙎𝙩𝙖𝙩𝙪𝙨: {vbv_stat}\n"
+        f"𝙑𝘽𝙑 𝙍𝙚𝙨𝙥𝙤𝙣𝙨𝙚: {vbv_resp}\n"
         f"═ ═ ═ ═ ═\n"
         f"𝘼𝙪𝙩𝙝𝙤𝙧 ↯ {FIXED_AUTHOR}"
     )
