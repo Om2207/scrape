@@ -80,7 +80,7 @@ def format(cardd):
         bin = country = flag = type = brand = bank = scheme = "N/A"
 
     extracted_data = (
-        f"⏤͟͞𝙊𝗠 「𝗫𝗬」\n"
+        f"𝗫𝘆𝗽𝗵𝗶𝗰「𝗫𝗬」\n"
         f"═ ═ ═ ═ ═\n"
         f"𝘾𝙖𝙧𝙙: {cardd}\n"
         f"𝙍𝙚𝙨𝙥𝙤𝙣𝙨𝙚: Approved ✅\n"
